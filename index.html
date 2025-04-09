@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Malankara Orthodox Old Age Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(to right, #3e1462, #673ab7);
+      color: #fff;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #eee;
+      padding: 1rem;
+      gap: 2rem;
+    }
+
+    nav a {
+      color: #3e1462;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    nav a:hover {
+      color: #673ab7;
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    .slider {
+      position: relative;
+      height: 450px;
+      margin-bottom: 2rem;
+      overflow: hidden;
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.8s ease;
+      height: 100%;
+    }
+
+    .slides img {
+        width: 100%;
+        height: 100%;
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+        flex-shrink: 0;
+        /* object-fit: cover; */
+        /* object-position: center center; */
+    }
+
+    .slider-controls {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+      padding: 0 1rem;
+      box-sizing: border-box;
+    }
+
+    .slider-controls button {
+      background: rgba(0, 0, 0, 0.5);
+      border: none;
+      color: #fff;
+      font-size: 2rem;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .section {
+      display: none;
+    }
+
+    .section.active {
+      display: block;
+      background: #f8f8fc;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #3e1462;
+    }
+
+    footer {
+      background: #3e1462;
+      color: #fff;
+      text-align: center;
+      padding: 1.25rem;
+      margin-top: 3rem;
+    }
+
+    .lang {
+      margin-bottom: 1rem;
+    }
+    .lang.ml {
+      font-family: 'Noto Sans Malayalam', sans-serif;
+      font-size: 1rem;
+      color: #333;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Malankara Orthodox Old Age Home</h1>
+    <p>Care. Compassion. Community.</p>
+  </header>
+
+  <nav>
+    <a onclick="showSection('about')">About</a>
+    <a onclick="showSection('mission')">Mission</a>
+    <a onclick="showSection('donate')">Donate</a>
+    <a onclick="showSection('contact')">Contact</a>
+  </nav>
+
+  <div class="container">
+    <div class="slider">
+      <div class="slides" id="slides">
+        <img src="./assets/img1.jpg" alt="Image 1">
+        <img src="./assets/img2.jpg" alt="Image 2">
+        <img src="./assets/img3.jpg" alt="Image 3">
+        <img src="./assets/img4.jpg" alt="Image 4">
+        <img src="./assets/img5.jpg" alt="Image 5">
+        <img src="./assets/img6.jpg" alt="Image 6">
+        <img src="./assets/img7.jpg" alt="Image 7">
+        <img src="./assets/img8.jpg" alt="Image 8">
+      </div>
+      <div class="slider-controls">
+        <button onclick="prevSlide()">&#8249;</button>
+        <button onclick="nextSlide()">&#8250;</button>
+      </div>
+    </div>
+
+    <section id="about" class="section active">
+        <h2 class="section-title">About Us / ഞങ്ങളേക്കുറിച്ച്</h2>
+        <div class="lang en">
+          <p>
+            Malankara Orthodox Old Age Home offers a compassionate and spiritual sanctuary for senior citizens.
+            Rooted in Orthodox Christian faith, our home provides dignified living, personal attention, and a peaceful
+            community where elderly individuals are treated with respect and love.
+          </p>
+        </div>
+        <div class="lang ml">
+          <p>
+            മലങ്കര ഓർത്തഡോക്സ് वृद्धാശ്രമം മുതിർന്ന പൗരന്മാർക്ക് കാരുണ്യപൂർണവും ആത്മീയവുമായ സംരക്ഷണമൊരുക്കുന്നു.
+            ഓർത്തഡോക്സ് ക്രിസ്ത്യൻ വിശ്വാസത്തിൽ ഉറച്ചുനിൽക്കുന്ന ഞങ്ങളുടെ ആശ്രമം മാന്യമായ ജീവിതം, വ്യക്തിഗത പരിചരണം,
+            സ്നേഹവും ആദരവുമുള്ള സമുദായം എന്നിവ ഉറപ്പാക്കുന്നു.
+          </p>
+        </div>
+      </section>
+
+      <section id="mission" class="section">
+        <h2 class="section-title">Our Mission / ഞങ്ങളുടെ ദൗത്യമാണ്</h2>
+        <div class="lang en">
+          <p>
+            Our mission is to serve the elderly with compassion and dignity, nurturing their body, mind, and spirit in a Christ-centered environment.
+            We strive to foster a community of support and reverence for every individual entrusted to our care.
+          </p>
+        </div>
+        <div class="lang ml">
+          <p>
+            മദ്യസ്ഥരോടുള്ള കരുണയും മാന്യതയും പുലർത്തികൊണ്ട് അവരുടെ ശരീരം, മനസ്സ്, ആത്മാവ് എന്നിവ ക്രിസ്തു കേന്ദ്രീകൃത
+            അന്തരീക്ഷത്തിൽ പരിപാലിക്കുന്നതാണ് ഞങ്ങളുടെ ദൗത്യം. ഞങ്ങളുടെ സംരക്ഷണത്തിലായ എല്ലാവരെയും ആദരവോടെ നോക്കുന്ന
+            ഒരു സംരക്ഷണസമുദായം സൃഷ്ടിക്കാൻ ഞങ്ങൾ പരിശ്രമിക്കുന്നു.
+          </p>
+        </div>
+      </section>
+      
+
+      <section id="donate" class="section">
+        <h2 class="section-title">Support Us / ഞങ്ങളെ പിന്തുണയ്ക്കുക</h2>
+        <div class="lang en">
+          <p>
+            Every contribution helps us extend our services to more elderly individuals in need. Your support provides food, shelter,
+            medical care, and spiritual nourishment.
+          </p>
+          <!-- <p><strong>Bank Details:</strong><br />
+            Malankara Orthodox Old Age Home<br />
+            A/C: 1234567890<br />
+            IFSC: ABCD0123456<br />
+            Bank: Orthodox Church Cooperative Bank
+          </p> -->
+        </div>
+        <div class="lang ml">
+          <p>
+            ഓരോ സംഭാവനയും സഹായം ആവശ്യമുള്ള കൂടുതൽ മുതിർന്നവർക്ക് ഞങ്ങളുടെ സേവനങ്ങൾ എത്തിക്കുന്നതിനു സഹായിക്കുന്നു.
+            നിങ്ങളുടെ പിന്തുണ ആഹാരം, താമസം, വൈദ്യസഹായം, ആത്മീയ പോഷണം എന്നിവ നൽകുന്നു.
+          </p>
+          <!-- <p><strong>ബാങ്ക് വിശദാംശങ്ങൾ:</strong><br />
+            മലങ്കര ഓർത്തഡോക്സ് वृद्धാശ്രമം<br />
+            അക്കൗണ്ട്: 1234567890<br />
+            IFSC: ABCD0123456<br />
+            ബാങ്ക്: ഓർത്തഡോക്സ് ചർച്ച് സഹകരണ ബാങ്ക്
+          </p> -->
+        </div>
+      </section>
+      
+
+      <section id="contact" class="section">
+        <h2 class="section-title">Contact Us / ഞങ്ങളെ സമീപിക്കുക</h2>
+        <div class="lang en">
+          <p>
+            Address: St. Mary's Campus, Church Road, Kerala, India<br />
+            Phone:  +91- 6235443399, 9847776764, 9947057066.<br />
+            Email: care@orthodoxoldagehome.org
+          </p>
+        </div>
+        <div class="lang ml">
+          <p>
+            വിലാസം: സെന്റ് മേരീസ് കാമ്പസ്, ചർച്ച് റോഡ്, കേരളം, ഇന്ത്യ<br />
+            ഫോൺ: ++91- 6235443399, 9847776764, 9947057066.<br />
+            ഇമെയിൽ: care@orthodoxoldagehome.org
+          </p>
+        </div>
+      </section>
+      
+  </div>
+
+  <footer>
+    &copy; 2025 Malankara Orthodox Old Age Home. All rights reserved.
+  </footer>
+
+  <script>
+    const slides = document.getElementById('slides');
+    let index = 0;
+
+    function showSlide(i) {
+      const total = slides.children.length;
+      index = (i + total) % total;
+      slides.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    function nextSlide() {
+      showSlide(index + 1);
+    }
+
+    function prevSlide() {
+      showSlide(index - 1);
+    }
+
+    setInterval(() => {
+      nextSlide();
+    }, 5000);
+
+    function showSection(id) {
+      document.querySelectorAll('.section').forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+
+</html>
